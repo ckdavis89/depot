@@ -1,11 +1,10 @@
-//
 /*
- * This is a manifest file that'll be compiled into application.css,
- * which will include all the files listed below.
+ * This is a manifest file that'll be compiled into application.css, which will
+ * include all the files listed below.
  *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be
- * referenced here using a relative path.
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any
+ * plugin's vendor/assets/stylesheets directory can be referenced here using a
+ * relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear
  * at the bottom of the compiled file so the styles you add here take
@@ -28,12 +27,22 @@ header.main {
   }
   background: #282;
   margin: 0;
+  padding-bottom: 2em;
   h1 {
     display: none;
   }
 }
-//
-//
+
+.notice, #notice {
+  background: #ffb;
+  border-radius: 0.5em;
+  border: solid 0.177em #882;
+  color: #882;
+  font-weight: bold;
+  margin-bottom: 1em;
+  padding: 1em 1.414em;
+  text-align: center;
+}
 .content {
   margin: 0;
   padding: 0;
@@ -84,11 +93,7 @@ header.main {
     padding: 0.5em;
   }
 }
-//
-//
 .time {
   color: white;
   font-weight: bold;
-  padding: 0.5em;
 }
-//
