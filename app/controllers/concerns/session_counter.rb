@@ -1,16 +1,17 @@
 module SessionCounter
 
-  def session_counter
-    if session[:counter].nil?
-      session[:counter] = 0
+  private
+    def session_counter
+      if session[:counter].nil?
+        session[:counter] = 0
+      end
+
+      session[:counter] += 1
+      @session_counter = session[:counter]
     end
 
-    session[:counter] += 1
-    @session_counter = session[:counter]
+    def reset_counter
+      session[:counter] = 0
+      @session_counter = session[:counter]
+    end
   end
-
-  def reset_counter
-    session[:counter] = 0
-    @session_counter = session[:counter]
-  end
-end
