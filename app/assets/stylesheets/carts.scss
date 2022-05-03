@@ -31,15 +31,33 @@
       border-top: solid thin;
     }
   }
-  input[type="submit"] {
+  .actions {
+    display: inline-flex;
+    right: -100px;
+    position: relative;
+    margin-top: 4px;
+  }
+  .empty_cart {
     background-color: #881;
     border-radius: 0.354em;
     border: solid thin #441;
     color: white;
     font-size: 1em;
     padding: 0.354em 1em;
+    margin-right: 10px;
   }
-  input[type="submit"]:hover {
+  .empty_cart:hover {
     background-color: #992;
+  }
+  .checkout {
+    background-color: #bfb;
+    border-radius: 0.354em;
+    border: solid thin #441;
+    color: black;
+    font-size: 1em;
+    padding: 0.354em 1em;
+  }
+  .checkout:hover {
+    background-color: #5ad35a;
   }
 }
