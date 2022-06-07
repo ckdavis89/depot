@@ -1,5 +1,28 @@
 require "test_helper"
 
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
-  driven_by :selenium, using: :headless_chrome, screen_size: [1400, 1400]
+  Capybara.register_driver :https_chrome do |app|
+    options = Selenium::WebDriver::Chrome::Options.new
+    options.add_argument('--allow-insecure-localhost')
+    options.add_argument('--ignore-certificate-errors')
+
+    Capybara::Selenium::Driver.new(
+      app,
+      browser: :chrome,
+      capabilities: [options]
+    )
+  end
+
+  Capybara.register_driver :headless_https_chrome do |app|
+    options = Selenium::WebDriver::Chrome::Options.new
+    options.add_argument('--headless')
+    options.add_argument('--allow-insecure-localhost')
+    options.add_argument('--ignore-certificate-errors')
+
+    Capybara::Selenium::Driver.new(
+      app,
+      browser: :chrome,
+      capabilities: [options]
+    )
+  end
 end
